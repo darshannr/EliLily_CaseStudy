@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assessment-1</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="site.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="centerHeader"><h3>Assessment 1</h3></header>
+    <div class="col-md-12">
+        <form id="form1" runat="server">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="box box-primary">
+                            <div class="box-header with-border">
+                                <div class="box-title">Upload Image</div>
+
+                                <div class="box-body">
+                                    <input id="imgUpload" type="file" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="box box-primary">
+                            <div class="box-header">
+                                <div class="box-title">Image Properties</div>
+                            </div>
+                            <div class="box-body">
+                                <div>
+                                    <label style="font-weight:bold;">Image Name : </label> <label id="imgName"></label>
+                                    <br />
+                                    <label style="font-weight:bold;">Image Dimensions : </label> <label id="imgDimensions"></label>
+                                    <br />
+                                    <label style="font-weight:bold;">Image Type : </label> <label id="imgType"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="box  box-primary">
+                            <div class="box-header">
+                                <div class="box-title">Position-Details</div>
+                            </div>
+                            <div class="box-body">
+                                <table class="table table-responsive table-bordered table-striped dataTable" id="positionTable">
+                                    <thead>
+                                        <tr>
+                                            <th>X Pos</th>
+                                            <th>Y Pos</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="uiBox" class="box box-primary" style="display:none;">
+                        <div class="box-header">
+                            <div class="box-title">Uploaded Image</div>
+                        </div>
+                        <div class="box-body" style="max-height:50%;">
+                            <img id="uploadedImage" accept="image/*" src="#" alt="Uploaded Image" style="max-height:100%;max-width:100%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<span class="dot"></span>-->
+        </form>
+        <form>
+            <input hidden id="popupText" type="button" value="Click Me" onclick="getValue();" />
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="image-mapper.js"></script>
+</body>
+</html>
